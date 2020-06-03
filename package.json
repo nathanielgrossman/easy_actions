@@ -1,0 +1,33 @@
+{
+  "name": "blm_emails",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx parcel build src/index.html --out-dir build/release --public-url ./",
+    "start": "npx parcel src/index.html --out-dir build/debug",
+    "tsc": "npx tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanielgrossman/blm_emails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathanielgrossman/blm_emails/issues"
+  },
+  "homepage": "https://github.com/nathanielgrossman/blm_emails#readme",
+  "dependencies": {
+    "components": "^0.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.3"
+  }
+}
