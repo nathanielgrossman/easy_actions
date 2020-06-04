@@ -10,7 +10,12 @@ export type EmailLinkProps = {
 };
 
 const EmailLink: React.FC<EmailLinkProps> = ({ linkInfo, name, location }) => {
-  const link = useMemo(() => generateLink(linkInfo, name, location), [linkInfo, name, location]);
+  const link = useMemo(() => generateLink(linkInfo, name, location), [
+    linkInfo,
+    name,
+    location,
+  ]);
+
   return (
     <div>
       <a href={link}>{linkInfo.title}</a>
