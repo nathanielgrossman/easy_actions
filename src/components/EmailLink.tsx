@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import styled from 'styled-components'
 
 import { generateLink } from "../utils";
 import { LinkInfo } from "../links";
@@ -9,6 +10,17 @@ export type EmailLinkProps = {
   location: string;
 };
 
+const Link = styled.a`
+  margin-top: .5em;
+  margin-bottom: .5em;
+  font-size: 1em;
+  text-align: center;
+  background-color: yellow;
+  color: black;
+  padding-left: 1em;
+  padding-right: 1em;
+`;
+
 const EmailLink: React.FC<EmailLinkProps> = ({ linkInfo, name, location }) => {
   const link = useMemo(() => generateLink(linkInfo, name, location), [
     linkInfo,
@@ -16,11 +28,7 @@ const EmailLink: React.FC<EmailLinkProps> = ({ linkInfo, name, location }) => {
     location,
   ]);
 
-  return (
-    <div>
-      <a href={link}>{linkInfo.title}</a>
-    </div>
-  );
+  return <Link href={link}>{linkInfo.title}</Link>;
 };
 
 export default EmailLink;

@@ -1,10 +1,16 @@
 import React, { useCallback } from "react";
+import styled from 'styled-components';
 
 type InputFieldProps = {
   label: string;
   value: string;
   setValue: (value: string) => void;
 };
+
+const Field = styled.input`
+  margin-bottom: 0.25em;
+  margin-top: 0.25em;
+`;
 
 const InputField: React.FC<InputFieldProps> = ({
   label,
@@ -17,10 +23,13 @@ const InputField: React.FC<InputFieldProps> = ({
     []
   );
   return (
-    <div>
-      <span>{label}</span>
-      <input type="text" name={label} value={value} onChange={onChange} />
-    </div>
+    <Field
+      type="text"
+      placeholder={label}
+      name={label}
+      value={value}
+      onChange={onChange}
+    />
   );
 };
 

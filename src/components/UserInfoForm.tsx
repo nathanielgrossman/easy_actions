@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+
 import InputField from "./InputField";
 
 type UserInfoFormProps = {
@@ -6,6 +8,15 @@ type UserInfoFormProps = {
   setCity: (city: string) => void;
   setName: (name: string) => void;
 };
+
+const Form = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+  margin-bottom: 2.5em;
+  font-size: 1em;
+  text-align: center;
+`;
 
 const UserInfoForm: React.FC<UserInfoFormProps> = ({
   city,
@@ -22,7 +33,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({
   }, [firstName, lastName]);
 
   return (
-    <div>
+    <Form>
       <InputField
         label="First name"
         value={firstName}
@@ -30,7 +41,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({
       />
       <InputField label="Last name" value={lastName} setValue={setLastName} />
       <InputField label="City" value={city} setValue={setCity} />
-    </div>
+    </Form>
   );
 };
 
