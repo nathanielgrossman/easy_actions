@@ -11,9 +11,9 @@ export type EmailLinkProps = {
 };
 
 const Link = styled.a`
-  margin-top: .5em;
-  margin-bottom: .5em;
-  font-size: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 0.75em;
   text-align: center;
   background-color: yellow;
   color: black;
