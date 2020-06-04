@@ -2,15 +2,27 @@ language: node_js
 node_js:
 - node
 script:
-  - npm run build
+- npm run build
 deploy:
-  provider: s3
-  access_key_id: AKIA2UIX2GNXWSOJ4AUS
-  secret_access_key:
-    secure: $SECRETACCESSKEY
-  bucket: www.easyactions.site
-  acl: public_read
-  region: us-west-1
-  local_dir: build/release
+- provider: s3
+  access_key_id: AKIA2UIX2GNX36MUXCVW
+  secret_access_key: &1
+    secure: oNNz+vbskiT6bx0hc8GNW95giDCRS2m/OvGm6G5treqNDB9lhzXjVy065DxOb1NvD+LEIappkl1ZXmjGBp7sLV7lqXCDMmfonj44QwnAytuuLHzV0IJdglzXXKfQJoGWa/H6wlfcLfbS1v7AvhXQA458TlsjsJBjVbVKEzwAKnogFXo8LmIqXXRa2Xb2B9IZolc6ulofIp6amsdLLK7BQpJBMFqGY+bhDE+XzFsmyklw8hdSEDOtnlNh6xZ0tf7dKcoiZsN8G9NlFab2wExMevpArpRpyFLa0LTQ0VCdNprV0DscpFJe6iJAXwVJjqswJPyySzrLmzTihwy2zQ14KiDQAF5e8+FRocCOR85gdLKS7nQkRAqsU20F2T4EMlztJ70bC+GMzfPwvEsZ3pkbPvNjp2aXj/e3hanDwi+TdBzUqevFKZ/cGno7Qst/cjeFAGJhbbbPC1mZvYZxeEK/YkitUtizQD+HzqGAZ2zKh52cWIYQIO4V9yGMZNrbqjWR/eHIUZxSuUUEMGH/oL8tBwmWdZPXATRVrRZIFZefiKmX0aB6nIOl84W6BEspokYM4y4z1I/fCrOHGOYlyl6SGnIN5vHR8X9ICIMltZ/BR9OLotRg0d5N0ks3LcI51y4U2j4b6aF93bOSOSH1BxFOGn/rT36QmXSIiJA0JstTkW8=
+  local_dir: dpl_cd_upload
   skip_cleanup: true
-
+  on: &2
+    repo: nathanielgrossman/easy_actions
+  bucket: www.easyactions.site
+- provider: codedeploy
+  access_key_id: AKIA2UIX2GNX36MUXCVW
+  secret_access_key: *1
+  bucket: www.easyactions.site
+  key: ''
+  bundle_type: ''
+  application: easy_actions
+  deployment_group: ''
+  on: *2
+  skip_cleanup: 'true'
+before_deploy:
+- mkdir -p dpl_cd_upload
+- mv build/release dpl_cd_upload/''
