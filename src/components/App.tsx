@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import styled from "styled-components";
 
 import EmailLink from "./EmailLink";
@@ -28,6 +28,19 @@ const App = () => {
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
 
+  const emailLinks = useMemo(
+    () =>
+      links.map((linkInfo) => (
+        <EmailLink
+          key={linkInfo.title}
+          linkInfo={linkInfo}
+          name={name}
+          location={city}
+        />
+      )),
+    [name, city]
+  );
+
   return (
     <Main>
       <Title>easy actions</Title>
@@ -50,14 +63,7 @@ const App = () => {
       <Title>your info</Title>
       <UserInfoForm setName={setName} city={city} setCity={setCity} />
       <Title>links</Title>
-      {links.map((linkInfo) => (
-        <EmailLink
-          key={linkInfo.title}
-          linkInfo={linkInfo}
-          name={name}
-          location={city}
-        />
-      ))}
+      {emailLinks}
       <Text>
         If you have a letter you would like added to this site or a general
         suggestion please contact{" "}
