@@ -25,6 +25,7 @@
   },
   "homepage": "http://easyactions.site",
   "dependencies": {
+    "@types/styled-components": "^5.1.0",
     "components": "^0.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
