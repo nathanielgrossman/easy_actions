@@ -6,7 +6,6 @@ import { links } from "../links";
 import UserInfoForm from "./UserInfoForm";
 
 const Main = styled.div`
-  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
