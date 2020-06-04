@@ -11,22 +11,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nathanielgrossman/blm_emails.git"
+    "url": "git+https://github.com/nathanielgrossman/easy_actions.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nathanielgrossman/blm_emails/issues"
+    "url": "https://github.com/nathanielgrossman/easy_actions/issues"
   },
-  "homepage": "https://github.com/nathanielgrossman/blm_emails#readme",
+  "babel": {
+    "plugins": [
+      "babel-plugin-styled-components"
+    ]
+  },
+  "homepage": "http://easyactions.site",
   "dependencies": {
     "components": "^0.1.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.2",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "babel-plugin-styled-components": "^1.10.7",
     "parcel-bundler": "^1.12.4",
     "typescript": "^3.9.3"
   }
