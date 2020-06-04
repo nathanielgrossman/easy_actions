@@ -67,7 +67,7 @@ const App = () => {
       </Text>
       <Title>your info</Title>
       <UserInfoForm setName={setName} city={city} setCity={setCity} />
-      <Title>links</Title>
+      <Title>emails</Title>
       {emailLinks}
       <Text>
         If you have a letter you would like added to this site or a general
