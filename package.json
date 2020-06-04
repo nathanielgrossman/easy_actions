@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx parcel build src/index.html --out-dir build/release",
+    "build": "npx parcel build src/index.html --out-dir build/release --public-url ./",
     "start": "npx parcel src/index.html --out-dir build/debug",
     "tsc": "npx tsc --noEmit",
     "postinstall": "rm -rf node_modules/@types/react-native"
