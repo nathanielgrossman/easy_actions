@@ -6,7 +6,6 @@ import { links } from "../links";
 import UserInfoForm from "./UserInfoForm";
 
 const Main = styled.div`
-  padding-top: 2em;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -14,12 +13,17 @@ const Main = styled.div`
   align-items: center;
 `;
 
+const MainTitle = styled.p`
+  margin-top: 1.5em;
+  font-size: 1.5em;
+`;
+
 const Title = styled.p`
   font-size: 1.5em;
 `;
 
 const Text = styled.p`
-  margin: 2em;
+  margin: 1.5em;
   font-size: 0.75em;
   text-align: center;
 `;
@@ -43,10 +47,10 @@ const App = () => {
 
   return (
     <Main>
-      <Title>easy actions</Title>
+      <MainTitle>easy actions</MainTitle>
       <Text>
         This is a collection of form letters addressed to local governments
-        demanding justice for black lives and the defunding of police.
+        demanding justice for Black lives and the defunding of police.
         <br />
         <br />
         Fill in your first name, last name, and location in the fields below and
@@ -70,9 +74,11 @@ const App = () => {
         <a href="mailto:admin@easyactions.site">admin@easyactions.site</a>
         <br />
         <br />
-        #blacklivesmatter
+        #BlackLivesMatter
         <br />
+        #DefundThePolice
         <br />
+        #InvestInCommunities
       </Text>
     </Main>
   );

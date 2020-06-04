@@ -13,7 +13,7 @@ const Form = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 0.5em;
-  margin-bottom: 2.5em;
+  margin-bottom: 1.5em;
   font-size: 1em;
   text-align: center;
 `;

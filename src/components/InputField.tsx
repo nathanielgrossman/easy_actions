@@ -10,6 +10,7 @@ type InputFieldProps = {
 const Field = styled.input`
   margin-bottom: 0.25em;
   margin-top: 0.25em;
+  font-size: 16px;
 `;
 
 const InputField: React.FC<InputFieldProps> = ({
