@@ -7,8 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx parcel build src/index.html --out-dir build/release",
     "start": "npx parcel src/index.html --out-dir build/debug",
-    "tsc": "npx tsc --noEmit"
+    "tsc": "npx tsc --noEmit",
+    "postinstall": "rm -rf node_modules/@types/react-native"
   },
+  "pre-commit": [
+    "tsc"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nathanielgrossman/easy_actions.git"
@@ -25,7 +29,6 @@
   },
   "homepage": "http://easyactions.site",
   "dependencies": {
-    "@types/styled-components": "^5.1.0",
     "components": "^0.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -33,10 +36,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
-    "@types/react": "^16.9.35",
+    "@types/react": "16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.0",
     "babel-plugin-styled-components": "^1.10.7",
     "parcel-bundler": "^1.12.4",
+    "pre-commit": "^1.2.2",
     "typescript": "^3.9.3"
   }
 }
