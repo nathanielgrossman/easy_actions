@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 
-import { generateLink } from "../Utils";
+import { generateLink } from "../utils";
 import { LinkInfo } from "../links";
 
 export type EmailLinkProps = {
