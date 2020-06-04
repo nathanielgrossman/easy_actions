@@ -61,6 +61,7 @@ const App = () => {
         These letters have been collected from various sources and were not
         written by the author of this site.
         <br />
+        <br />
         This site does not save or transmit any data, all provided information
         is stored directly on your device.
       </Text>
