@@ -160,7 +160,7 @@ export const links: Array<LinkInfo> = [
       "councilmember.englander@lacity.org",
       "councilmember.ofarrell@lacity.org",
       "councilmember.huizar@lacity.org",
-      "councilmember.buscaino@lacity.org?cc=email@address.com",
+      "councilmember.buscaino@lacity.org",
     ],
     subject: "We%20demand%20a%20People%27s%20Budget",
     getBody: (name: string, location: string) =>
