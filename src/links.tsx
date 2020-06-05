@@ -248,6 +248,68 @@ export const links: Array<LinkInfo> = [
     getBody: (name: string, location: string) =>
       `Hello%2C%20my%20name%20is%20${name}%20and%20I%20am%20a%20resident%20of%20${location}.%0A%0AThe%20City%20of%20Cleveland%20needs%20to%20address%20the%20lack%20of%20investment%20in%20predominantly%20Black%20communities%20and%20the%20over-investment%20in%20their%20criminalization.%20Although%20the%202020%20city%20budget%20was%20already%20approved%20in%20March%2C%20the%20City%20of%20Cleveland%20must%20reduce%20its%20Division%20of%20Police%20budget.%0A%0A%24217%2C908%2C375%20of%20the%20%241.8%20billion%20budget%20is%20allocated%20to%20the%20Division%20of%20Police%2C%20an%20increase%20of%20%2410%20million%20from%202019.%20That%20increase%20is%20greater%20than%20the%20entire%202020%20Department%20of%20Housing%20budget.%20%0A%0AAfter%20a%20two%20year%20investigation%20ending%20in%202014%2C%20the%20Justice%20Department%20cited%20CPD%20for%20abuse%20due%20to%20a%20pattern%20and%20practice%20of%20excessive%20force.%20Ohioans%20understand%20this%20resulted%20in%20a%20consent%20decree%20that%20mandates%20certain%20budget%20allocations.%20Ohioans%20also%20expect%20and%20deserve%20compliance%20and%20progress%20with%20the%20consent%20decree.%20In%20April%202020%2C%20Desmond%20Franklin%20was%20shot%20and%20killed%20by%20an%20off-duty%20police%20officer.%20In%20December%202019%2C%2013-year-old%20Tamia%20Chappman%20was%20killed%20in%20a%20high-speed%20police%20chase%20while%20walking%20to%20the%20library.%20We%20cannot%20rely%20on%20the%20Division%20of%20Police%20to%20%E2%80%9Cself-evaluate%20in%20order%20to%20improve%20in%20areas%20of%20training%2C%20efficient%20and%20effective%20delivery%20of%20services%2C%20officer%20safety%2C%20and%20community%20engagement%E2%80%9D%20in%20the%20best%20interest%20of%20the%20public%2C%20like%20the%20staffing%20report%20claims.%0A%0AMayor%20Frank%20Jackson%20is%20complicit%20in%20the%20crisis%20of%20police%20brutality.%20Tragic%20killings%20of%20Black%20Cleveland%20citizens%20by%20police%20violence%20%E2%80%94%20including%20Timothy%20Russell%2C%20Malissa%20Williams%2C%20and%20Tamir%20Rice%20%E2%80%94%20happened%20under%20Mayor%20Jackson%E2%80%99s%20tenure.%20%0A%0AIn%20an%20interview%20with%20The%20Appeal%20on%20June%203%202020%2C%20Mayor%20Jackson%20said%3A%20%0Aa)%20he%20would%20not%20revisit%20reallocating%20police%20budget%20now%20%0Ab)%20Cleveland%20cannot%20rely%20on%20the%20government%20to%20help%20end%20structural%20racism%20and%20police%20violence%20and%20we%20should%20instead%20look%20to%20philanthropy%20and%20the%20private%20sector.%0A%E2%80%A6If%20not%20now%2C%20when%3F%20If%20government%20can%E2%80%99t%20help%20fix%20itself%2C%20who%20can%3F%20The%20burden%20does%20not%20lie%20on%20citizens.%20I%20demand%20you%20reconsider%20these%20stances%20to%20help%20end%2C%20not%20mitigate%2C%20police%20brutality.%0A%0ACleveland%20City%20Council%20cares%20about%20these%20issues.%20The%20recent%20unanimous%20vote%20to%20declare%20racism%20a%20public%20health%20crisis%20proves%20that.%20I%20ask%20that%20you%20continue%20to%20find%20sustainable%2C%20long-term%20change%20for%20the%20entire%20community.%20%0A%0AResearch%20shows%20that%20a%20living%20wage%2C%20access%20to%20holistic%20health%20services%20and%20treatment%2C%20educational%20opportunity%2C%20and%20stable%20housing%20are%20far%20more%20successful%20at%20reducing%20crime%20than%20police%20or%20prisons.%20Redirect%20money%20from%20the%20Division%20of%20Police%20and%20instead%20invest%20in%20social%20services.%20The%20policing%20budget%20can%20be%20better%20spent%20on%20quality%20of%20life%20for%20all%2C%20particularly%20in%20predominantly%20Black%20and%20brown%20communities.%20Programs%20like%20education%2C%20housing%2C%20healthcare%2C%20cooperative%20businesses%2C%20and%20community%20centers%20deserve%20that%20funding.%20%0A%0AThank%20you,%20%0A%0A${name}`,
   },
+  {
+    title: "Defund the Houston Police Department",
+    to: "districta@houstontx.gov",
+    cc: [
+      "districtb@houstontx.gov",
+      "districtc@houstontx.gov",
+      "districtd@houstontx.gov",
+      "districte@houstontx.gov",
+      "districtf@houstontx.gov",
+      "districtg@houstontx.gov",
+      "districth@houstontx.gov",
+      "districti@houstontx.gov",
+      "districtj@houstontx.gov",
+      "districtk@houstontx.gov",
+      "mayor@houstontx.gov",
+    ],
+    subject:
+      "Commit%20to%20Vote%20No%20on%20the%20Mayor's%20Budget%20%2F%20Defund%20the%20HPD",
+    getBody: (name: string, location: string) =>
+      `Dear%20Houston%20City%20Council%20Members%2C%0D%0A%0D%0AMy%20name%20is%20${name}%20and%20I%20am%20a%20resident%20of%20${location}.%20I%20am%20emailing%20today%20to%20demand%20that%20you%20vote%20NO%20on%20the%20Mayor's%20FY21%20proposed%20budget%20on%20Wednesday%206%2F10%20in%20response%20to%20the%20ongoing%20police%20brutality%20taking%20place%20around%20the%20country%2C%20the%20epidemic%20of%20police%20brutality%20itself%2C%20and%20for%20the%20inherent%20systemic%20racism%20of%20the%20police%20system%20itself.%0D%0A%0D%0AI%20urge%20you%20to%20pressure%20the%20office%20of%20the%20mayor%20towards%20an%20ethical%20and%20equal%20reallocation%20of%20the%20Houston%20expense%20budget%2C%20away%20from%20HPD%20and%20towards%20health%20and%20human%20services%2C%20libraries%20and%20education%20programs%2C%20as%20well%20as%20neighborhood%20planning%20and%20development%20effective%20at%20the%20beginning%20of%20FY21.%0D%0A%0D%0AFurthermore%2C%20I%20ask%20the%20city%20council%20and%20mayor%20to%20discontinue%20tax%20payer%20funding%20of%20the%20Houston%20Police%20Department%20Officer%20Liability%20insurance.%20In%20any%20other%20profession%2C%20employees%20are%20required%20to%20fund%20their%20own%20liability%20insurance%20and%20this%20should%20be%20the%20same%20for%20the%20police%20department.%20Furthermore%2C%20the%20community%20feels%20that%20this%20will%20curb%20instances%20of%20police%20brutality%20and%20officer-involved%20shootings%20of%20unarmed%20persons%20if%20liability%20insurance%20is%20funded%20from%20the%20pockets%20of%20the%20officers%20themselves.%0D%0A%0D%0AThank%20you%2C%0D%0A${name}`,
+  },
+  {
+    title: "Adjust the 2021 Budget for Houston",
+    to: "mayor@houstontx.gov",
+    cc: [
+      "atlarge1@houstontx.gov",
+      "atlarge2@houstontx.gov",
+      "atlarge3@houstontx.gov",
+      "atlarge4@houstontx.gov",
+      "atlarge5@houstontx.gov",
+      "districta@houstontx.gov",
+      "districtb@houstontx.gov",
+      "districtc@houstontx.gov",
+      "districtd@houstontx.gov",
+      "districte@houstontx.gov",
+      "districtf@houstontx.gov",
+      "districtg@houstontx.gov",
+      "districth@houstontx.gov",
+      "districti@houstontx.gov",
+      "districtj@houstontx.gov",
+      "districtk@houstontx.gov",
+    ],
+    subject: "2021%20Fiscal%20Year%20Budget%20for%20Houston",
+    getBody: (name: string, _: string) =>
+      `Hello%2C%0D%0A%0D%0AI%20am%20emailing%20today%20to%20let%20you%20know%20that%20I,%20along%20with%20many%20other%20Houstonians,%20highly%20encourage%20the%20budget%20to%20be%20revised%20and%20for%20you%20to%20vote%20NO%20on%20the%20budget%20on%20Wednesday%206/10.%20It%20is%20absolutely%20horrifying%20that%2017%%20of%20the%20budget%20will%20go%20to%20the%20police%20department%20while%20only%205%%20will%20go%20to%20the%20health%20department,%20libraries,%20and%20parks.%20This%20is%20contributing%20to%20a%20less%20equitable%20community%20and%20not%20addressing%20the%20root%20of%20the%20problems%20our%20city%20faces.%20This%20is%20an%20issue%20of%20extreme%20urgency%20and%20importance,%20and%20the%20people%20of%20Houston,%20your%20voters,%20will%20remember%20it%20come%20election%20time.%20DO%20NOT%20approve%20this%20budget%20that%20ignores%20the%20true%20needs%20of%20our%20community.%0D%0A%0D%0AThank you%2C%0D%0A%0D%0A${name}`,
+  },
+  {
+    title: "Decarceration Budget for LA County",
+    to: "hamai@ceo.lacounty.gov",
+    cc: ["info@lacounty.gov"],
+    subject:
+      "In%20Support%20of%20a%20Decarceration%20Budget%20for%20LA%20County",
+    getBody: (name: string, _: string) =>
+      `Dear%20County%20CEO%20Hamai%2C%0D%0A%0D%0AI%20am%20writing%20to%20you%20in%20these%20difficult%20times%20to%20ask%20you%20to%20amend%20your%202020-2021%20budget.%0D%0A%0D%0AAcross%20the%20country,%20people%20are%20demonstrating%20in%20the%20streets%20and%20uniting%20around%20the%20call%20to%20“defund%20the%20police”.%20This%20is%20not%20just%20a%20rallying%20cry;%20it%20is%20a%20vision%20for%20a%20new%20way%20of%20approaching%20how%20we%20care%20for,%20protect,%20and%20strengthen%20our%20communities.%20You%20have%20heard%20many%20iterations%20of%20this%20vision%20in%20public%20comments,%20in%20petitions,%20and%20from%20the%20community%20leaders%20who%20have%20been%20collaborators%20and%20guides%20in%20the%20historic%20actions%20that%20the%20Board%20has%20already%20supported.%0D%0A%0D%0AHere%20in%20Los%20Angeles,%20the%20call%20for%20law%20enforcement%20accountability%20and%20transformation%20includes%20the%20Sheriff’s%20Department.%20Sheriff%20Villanueva%20has%20shown%20callousness,%20negligence,%20and%20a%20disregard%20for%20human%20life%20in%20his%20handling%20of%20COVID-19%20in%20the%20county%20jails%20and%20detention%20centers,%20as%20evidenced%20by%20his%20public%20accusations%20that%20people%20in%20jail%20are%20trying%20to%20infect%20themselves,%20and%20his%20reliance%20on%20a%20baseless%20“herd%20immunity%20theory.”%20He%20has%20also%20flouted%20the%20subpoena%20issued%20to%20him%20by%20the%20Civilian%20Oversight%20Commission,%20refusing%20to%20appear%20and%20answer%20questions%20about%20his%20approach%20to%20COVID-19.%20The%20Sheriff’s%20demonstrated%20opposition%20to%20LA’s%20emerging%20“care%20first”%20approach,%20the%20reduction%20in%20the%20jail%20population%20due%20to%20COVID-19,%20and%20the%20overall%20decrease%20in%20crime,%20all%20necessitate%20allocating%20funds%20away%20from%20the%20Sheriff's%20Department%20in%20order%20to%20make%20Los%20Angeles%20a%20safer%20and%20healthier%20place%20for%20all.%0D%0A%0D%0AI%20urge%20you%20to%20amend%20your%20current%20proposed%20budget:%20to%20decrease%20funding%20for%20the%20Los%20Angeles%20Sheriff’s%20Department;%20redistribute%20the%20reductions%20in%20departmental%20budgets%20so%20that%20the%20Sheriff’s%20Department%20carries%20the%20burden%20of%20COVID-related%20austerity;%20and%20begin%20funding%20the%20implementation%20of%20the%20Alternatives%20to%20Incarceration%20Report.%0D%0A%0D%0ANow%20more%20than%20ever,%20we%20must%20prioritize%20steps%20toward%20a%20more%20just,%20safe,%20and%20equitable%20Los%20Angeles.%20I%20hope%20that%20you%20continue%20your%20commitment%20to%20this%20by%20supporting%20a%20decarceration%20budget.%0D%0A%0D%0ASincerely,%0D%0A%0D%0A${name}`,
+  },
+  {
+    title: "No New Jails D.C.",
+    to: "eom@dc.gov",
+    subject: "No%20New%20Jails",
+    getBody: (name: string, location: string) =>
+      `I'm%20writing%20to%20urge%20the%20D.C.%20government%20to%20stop%20any%20plans%20for%20building%20a%20new%20jail%20and%20invest%20resources%20in%20the%20health%20and%20well-being%20of%20currently%20and%20formerly%20incarcerated%20communities.%20Every%20human%20being%20deserves%20access%20to%20healthcare,%20education,%20transportation,%20job%20security,%20and%20more.%20Investing%20resources%20into%20our%20communities%20keeps%20us%20safe,%20not%20building%20more%20jails.%20I%20urge%20you%20to%20not%20build%20a%20new%20jail%20in%20D.C.%0D%0A%0D%0AThank you%2C%0D%0A%0D%0A${name}`,
+  },
 ];
 
 // TEMPLATE
