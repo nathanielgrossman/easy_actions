@@ -69,6 +69,13 @@ const App = () => {
       <Title>emails</Title>
       {emailLinks}
       <Text>
+        NOTE: Defund12 has defunding letters for a large number of police
+        departments. I've copied over some of them but they're adding new emails
+        faster than I can keep up and it seems unnecessary to duplicate them
+        across two sites. If you don't see your city represented on this page
+        make sure to check out <a href="https://defund12.org/">defund12.org</a>.
+        <br />
+        <br />
         If you have a letter you would like added to this site or a general
         suggestion please contact{" "}
         <a href="mailto:admin@easyactions.site">admin@easyactions.site</a>
