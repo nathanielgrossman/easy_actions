@@ -33,14 +33,16 @@ const App = () => {
 
   const emailLinks = useMemo(
     () =>
-      links.map((linkInfo) => (
-        <EmailLink
-          key={linkInfo.title}
-          linkInfo={linkInfo}
-          name={name}
-          location={city}
-        />
-      )),
+      links
+        .sort((a, b) => a.title.localeCompare(b.title))
+        .map((linkInfo) => (
+          <EmailLink
+            key={linkInfo.title}
+            linkInfo={linkInfo}
+            name={name}
+            location={city}
+          />
+        )),
     [name, city]
   );
 
