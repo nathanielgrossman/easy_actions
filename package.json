@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "@types/jest": "^26.0.0",
+    "@types/react-copy-to-clipboard": "^4.3.0",
     "components": "^0.1.0",
     "react": "^16.13.1",
     "react-copy-to-clipboard": "^5.0.2",

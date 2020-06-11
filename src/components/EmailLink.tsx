@@ -1,8 +1,7 @@
 import React, { useMemo, useState, useCallback } from "react";
 import styled from "styled-components";
 
-// @ts-ignore
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import CopyToClipboard from "react-copy-to-clipboard";
 
 import Copy from "./Copy";
 
