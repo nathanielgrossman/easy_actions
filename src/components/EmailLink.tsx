@@ -66,9 +66,9 @@ const EmailLink: React.FC<EmailLinkProps> = ({ linkInfo, name, location }) => {
   return (
     <div style={{ alignItems: "center" }}>
       <Link href={link}>{linkInfo.title}</Link>
-      <CopyButton onClick={copyAction}>
+      {/* <CopyButton onClick={copyAction}>
         <Copy color={status} />
-      </CopyButton>
+      </CopyButton> */}
     </div>
   );
 };

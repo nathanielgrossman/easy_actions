@@ -60,9 +60,9 @@ const App = () => {
         pre-composed message in your default mail client.
         <br />
         <br />
-        If you'd prefer to copy the text of the email and it's recipients, click the <Copy /> icon.
+        {/* If you'd prefer to copy the text of the email and it's recipients, click the <Copy /> icon.
         <br />
-        <br />
+        <br /> */}
         These letters have been collected from various sources and were not
         written by the author of this site.
         <br />
