@@ -8,7 +8,8 @@
     "build": "npx parcel build src/index.html --out-dir build/release --public-url ./",
     "start": "npx parcel src/index.html --out-dir build/debug",
     "tsc": "npx tsc --noEmit",
-    "postinstall": "rm -rf node_modules/@types/react-native"
+    "postinstall": "rm -rf node_modules/@types/react-native",
+    "prebuild": " npm run tsc && npm test"
   },
   "pre-commit": [
     "postinstall",
