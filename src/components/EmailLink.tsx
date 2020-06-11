@@ -1,6 +1,9 @@
 import React, { useMemo, useState, useCallback } from "react";
 import styled from "styled-components";
 
+// @ts-ignore
+import { CopyToClipboard } from "react-copy-to-clipboard";
+
 import Copy from "./Copy";
 
 import { generateLink, generateCopyableEmail } from "../utils";
@@ -50,25 +53,19 @@ const EmailLink: React.FC<EmailLinkProps> = ({ linkInfo, name, location }) => {
     }, 1000);
   }, [linkInfo]);
 
-  const setError = useCallback(() => {
-    setStatus("red");
-    alert("There was an error while copying this email. Sorry!");
-    setTimeout(() => {
-      setStatus(undefined);
-    }, 1000);
-  }, []);
-
-  const copyAction = useCallback(
-    () => generateCopyableEmail(linkInfo, name, location, setSuccess, setError),
-    [linkInfo, name, location, setSuccess, setError]
+  const copyableEmail = useMemo(
+    () => generateCopyableEmail(linkInfo, name, location),
+    [linkInfo, name, location]
   );
 
   return (
     <div style={{ alignItems: "center" }}>
       <Link href={link}>{linkInfo.title}</Link>
-      {/* <CopyButton onClick={copyAction}>
-        <Copy color={status} />
-      </CopyButton> */}
+      <CopyToClipboard text={copyableEmail} onCopy={setSuccess}>
+        <CopyButton>
+          <Copy color={status} />
+        </CopyButton>
+      </CopyToClipboard>
     </div>
   );
 };

@@ -26,9 +26,7 @@ export const generateLink = (
 export const generateCopyableEmail = (
   linkInfo: LinkInfo,
   name: string,
-  location: string,
-  successCallback: () => void,
-  errorCallback: () => void
+  location: string
 ) => {
   const email = `
 To: ${linkInfo.to},
@@ -51,5 +49,5 @@ Subject: ${decodeURIComponent(linkInfo.subject)},
 
 Body: ${decodeURIComponent(linkInfo.getBody(name, location))}
   `;
-  navigator.clipboard.writeText(email).then(successCallback, errorCallback);
+  return email;
 };
