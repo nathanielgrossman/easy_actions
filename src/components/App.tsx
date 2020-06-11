@@ -4,6 +4,7 @@ import styled from "styled-components";
 import EmailLink from "./EmailLink";
 import { links } from "../links";
 import UserInfoForm from "./UserInfoForm";
+import Copy from "./Copy";
 
 const Main = styled.div`
   width: 100vw;
@@ -57,6 +58,9 @@ const App = () => {
         Fill in your first name, last name, and location in the fields below and
         then click on the email you would like to send. It will open a
         pre-composed message in your default mail client.
+        <br />
+        <br />
+        If you'd prefer to copy the text of the email and it's recipients, click the <Copy /> icon.
         <br />
         <br />
         These letters have been collected from various sources and were not
