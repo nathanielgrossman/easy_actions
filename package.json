@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "npx parcel build src/index.html --out-dir build/release --public-url ./",
     "start": "npx parcel src/index.html --out-dir build/debug",
     "tsc": "npx tsc --noEmit",
@@ -28,7 +28,22 @@
     ]
   },
   "homepage": "http://easyactions.site",
+  "jest": {
+    "preset": "ts-jest",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "\\.(scss)$": "<rootDir>/src/__mocks__/styleMock.ts"
+    },
+    "testMatch": [
+      "**/__tests__/*.(test|spec).(ts|tsx|js)"
+    ]
+  },
   "dependencies": {
+    "@types/jest": "^26.0.0",
     "components": "^0.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -40,8 +55,10 @@
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.0",
     "babel-plugin-styled-components": "^1.10.7",
+    "jest": "^26.0.1",
     "parcel-bundler": "^1.12.4",
     "pre-commit": "^1.2.2",
+    "ts-jest": "^26.1.0",
     "typescript": "^3.9.3"
   }
 }
