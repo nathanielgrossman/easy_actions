@@ -11,6 +11,7 @@
     "postinstall": "rm -rf node_modules/@types/react-native"
   },
   "pre-commit": [
+    "postinstall",
     "tsc"
   ],
   "repository": {
