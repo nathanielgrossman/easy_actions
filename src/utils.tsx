@@ -51,3 +51,8 @@ Body: ${decodeURIComponent(linkInfo.getBody(name, location))}
   `;
   return email;
 };
+
+const salutations = ["Sincerely", "Best", "Thank you", "Regards", "Thank you for your time", "Respectfully"];
+
+export const getSalutation = () =>
+  salutations[Math.floor(Math.random() * salutations.length)];
