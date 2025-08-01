@@ -17,6 +17,7 @@ const Main = styled.div`
 const MainTitle = styled.p`
   margin-top: 1.5em;
   font-size: 1.5em;
+  text-align: center;
 `;
 
 const Title = styled.p`
