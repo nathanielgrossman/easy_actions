@@ -60,6 +60,7 @@ const App = () => {
   return (
     <Main>
       <MainTitle>Canyon Hills Project Public Comment Generator</MainTitle>
+
       <Text>
         After years of hard work, we are finally getting an updated
         Environmental Impact Report (EIR) for the Canyon Hills project. Thanks
@@ -85,7 +86,10 @@ const App = () => {
         Unless we continue to speak up!!! We've made it super easy to write in.
         <br />
         <br />
-        <h2>Directions:</h2>
+        For more information, check out{" "}
+        <a href="https://nocanyonhills.org">No Canyon Hills</a>
+        <br /> <br />
+        <Title>Directions:</Title>
         <br />
         <strong>
           Fill in your first name, last name, and choose the resident type that
@@ -112,6 +116,7 @@ const App = () => {
         setResidentType={setResidentType}
       />
       {emailLinks}
+
       <PdfViewer
         src={canyonHillsPDF}
         title="Notice of Preparation - Canyon Hills Project"
