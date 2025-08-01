@@ -3,10 +3,17 @@ import styled from "styled-components";
 
 import InputField from "./InputField";
 
+export const RESIDENT_TYPES = [
+  "resident",
+  "environmentalist",
+  "student",
+  "community member",
+];
+
 type UserInfoFormProps = {
-  city: string;
-  setCity: (city: string) => void;
   setName: (name: string) => void;
+  residentType: string;
+  setResidentType: (residentType: string) => void;
 };
 
 const Form = styled.div`
@@ -19,9 +26,9 @@ const Form = styled.div`
 `;
 
 const UserInfoForm: React.FC<UserInfoFormProps> = ({
-  city,
-  setCity,
   setName,
+  residentType,
+  setResidentType,
 }: UserInfoFormProps) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -40,7 +47,16 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({
         setValue={setFirstName}
       />
       <InputField label="Last name" value={lastName} setValue={setLastName} />
-      <InputField label="City" value={city} setValue={setCity} />
+      <select
+        value={residentType}
+        onChange={(e) => setResidentType(e.target.value)}
+      >
+        {RESIDENT_TYPES.map((residentType) => (
+          <option key={residentType} value={residentType}>
+            {residentType}
+          </option>
+        ))}
+      </select>
     </Form>
   );
 };

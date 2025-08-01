@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 import EmailLink from "./EmailLink";
 import { links } from "../links";
-import UserInfoForm from "./UserInfoForm";
+import UserInfoForm, { RESIDENT_TYPES } from "./UserInfoForm";
 import Copy from "./Copy";
+import canyonHillsPDF from "../Notice of Preparation - Canyon Hills Project.pdf";
 
 const Main = styled.div`
   width: 100vw;
@@ -28,9 +29,16 @@ const Text = styled.p`
   text-align: center;
 `;
 
+const PdfViewer = styled.iframe`
+  width: 50vw;
+  height: calc(50vw * 11 / 8.5);
+  border: 1px solid #ccc;
+`;
+
 const App = () => {
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
+  const [residentType, setResidentType] = useState(RESIDENT_TYPES[0]);
 
   const emailLinks = useMemo(
     () =>
@@ -42,56 +50,75 @@ const App = () => {
             linkInfo={linkInfo}
             name={name}
             location={city}
+            residentType={residentType}
           />
         )),
-    [name, city]
+    [name, city, residentType]
   );
 
   return (
     <Main>
-      <MainTitle>easy actions</MainTitle>
+      <MainTitle>Canyon Hills Project Public Comment Generator</MainTitle>
       <Text>
-        This is a collection of form letters addressed to local governments
-        demanding justice for Black lives and the defunding of police.
+        After years of hard work, we are finally getting an updated
+        Environmental Impact Report (EIR) for the Canyon Hills project. Thanks
+        to public support (you!), the California Department of Fish and Wildlife
+        is opening the door. Now we have to crank that door wide open.
         <br />
         <br />
-        Fill in your first name, last name, and location in the fields below and
-        then click on the email you would like to send. It will open a
-        pre-composed message in your default mail client.
+        Yesterday, CDFW announced they would prepare a Supplemental
+        Environmental Impact Report (SEIR) - A BIG WIN for transparency,
+        ecological review, and this community of folks who care about the earth.
+        BUT there's a catch... CDFW says it will ONLY analyze impacts to
+        Crotch's Bumble Bee, because that's the part of the project they've been
+        tasked with overseeing for an ITP. That means no analysis of:
         <br />
         <br />
-        If you'd prefer to copy the text of the email and it's recipients, click the <Copy /> icon.
+        - Wildlife corridors <br />
+        - Cougar Habitat <br />
+        - Riparian ecology <br />
+        - Fire risk <br />
+        - Energy emissions <br />
+        - Climate impact <br />
+        <br />
+        Unless we continue to speak up!!! We've made it super easy to write in.
         <br />
         <br />
-        These letters have been collected from various sources and were not
-        written by the author of this site.
+        <h2>Directions:</h2>
+        <br />
+        <strong>
+          Fill in your first name, last name, and choose the resident type that
+          best describes you in the fields below and then click the generate
+          email button. It will open a pre-composed message in your default mail
+          client.
+        </strong>
+        <br />
+        <br />
+        If you'd prefer to copy the text of the email and it's recipients, click
+        the <Copy /> icon.
         <br />
         <br />
         This site does not save or transmit any data, all provided information
         is stored directly on your device.
+        <br />
+        <br />
+        Share this with friends. Let's make sure this SEIR means something!
       </Text>
       <Title>your info</Title>
-      <UserInfoForm setName={setName} city={city} setCity={setCity} />
-      <Title>emails</Title>
+      <UserInfoForm
+        setName={setName}
+        residentType={residentType}
+        setResidentType={setResidentType}
+      />
       {emailLinks}
+      <PdfViewer
+        src={canyonHillsPDF}
+        title="Notice of Preparation - Canyon Hills Project"
+      />
       <Text>
-        NOTE: Defund12 has defunding letters for a large number of police
-        departments. I've copied over some of them but they're adding new emails
-        faster than I can keep up and it seems unnecessary to duplicate them
-        across two sites. If you don't see your city represented on this page
-        make sure to check out <a href="https://defund12.org/">defund12.org</a>.
-        <br />
-        <br />
-        If you have a letter you would like added to this site or a general
-        suggestion please contact{" "}
+        If you have a general suggestion or concern please contact{" "}
         <a href="mailto:admin@easyactions.site">admin@easyactions.site</a>
         <br />
-        <br />
-        #BlackLivesMatter
-        <br />
-        #DefundThePolice
-        <br />
-        #InvestInCommunities
       </Text>
     </Main>
   );

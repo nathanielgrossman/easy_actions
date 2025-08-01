@@ -3,7 +3,8 @@ import { LinkInfo } from "./links";
 export const generateLink = (
   linkInfo: LinkInfo,
   name: string,
-  location: string
+  location: string,
+  residentType: string
 ) => {
   let base = `mailto:${linkInfo.to}?`;
   if (linkInfo.cc) {
@@ -18,7 +19,7 @@ export const generateLink = (
     }, "bcc=");
     base += bcc;
   }
-  const body = linkInfo.getBody(name, location);
+  const body = linkInfo.getBody(name, location, residentType);
   base += `subject=${linkInfo.subject}&body=${body}`;
   return base;
 };
@@ -26,7 +27,8 @@ export const generateLink = (
 export const generateCopyableEmail = (
   linkInfo: LinkInfo,
   name: string,
-  location: string
+  location: string,
+  residentType: string
 ) => {
   const email = `
 To: ${linkInfo.to},
@@ -47,12 +49,19 @@ BCC: ${
 
 Subject: ${decodeURIComponent(linkInfo.subject)},
 
-Body: ${decodeURIComponent(linkInfo.getBody(name, location))}
+Body: ${decodeURIComponent(linkInfo.getBody(name, location, residentType))}
   `;
   return email;
 };
 
-const salutations = ["Sincerely", "Best", "Thank you", "Regards", "Thank you for your time", "Respectfully"];
+const salutations = [
+  "Sincerely",
+  "Best",
+  "Thank you",
+  "Regards",
+  "Thank you for your time",
+  "Respectfully",
+];
 
 export const getSalutation = () =>
   salutations[Math.floor(Math.random() * salutations.length)];
