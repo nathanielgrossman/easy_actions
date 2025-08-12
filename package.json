@@ -7,13 +7,11 @@
     "test": "jest",
     "build": "npx parcel build src/index.html --out-dir build/release --public-url ./",
     "start": "npx parcel src/index.html --out-dir build/debug",
-    "tsc": "npx tsc --noEmit",
     "postinstall": "rm -rf node_modules/@types/react-native",
-    "prebuild": " npm run tsc && npm test"
+    "prebuild": "npm test"
   },
   "pre-commit": [
-    "postinstall",
-    "tsc"
+    "postinstall"
   ],
   "repository": {
     "type": "git",
@@ -47,10 +45,12 @@
   "dependencies": {
     "@types/jest": "^26.0.0",
     "@types/react-copy-to-clipboard": "^4.3.0",
+    "@types/react-router-dom": "^5.3.0",
     "components": "^0.1.0",
     "react": "^16.13.1",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.3.0",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

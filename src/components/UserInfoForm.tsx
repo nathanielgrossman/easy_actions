@@ -14,6 +14,7 @@ type UserInfoFormProps = {
   setName: (name: string) => void;
   residentType: string;
   setResidentType: (residentType: string) => void;
+  showResidentType?: boolean;
 };
 
 const Form = styled.div`
@@ -29,6 +30,7 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({
   setName,
   residentType,
   setResidentType,
+  showResidentType = true,
 }: UserInfoFormProps) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -47,16 +49,18 @@ const UserInfoForm: React.FC<UserInfoFormProps> = ({
         setValue={setFirstName}
       />
       <InputField label="Last name" value={lastName} setValue={setLastName} />
-      <select
-        value={residentType}
-        onChange={(e) => setResidentType(e.target.value)}
-      >
-        {RESIDENT_TYPES.map((residentType) => (
-          <option key={residentType} value={residentType}>
-            {residentType}
-          </option>
-        ))}
-      </select>
+      {showResidentType && (
+        <select
+          value={residentType}
+          onChange={(e) => setResidentType(e.target.value)}
+        >
+          {RESIDENT_TYPES.map((residentType) => (
+            <option key={residentType} value={residentType}>
+              {residentType}
+            </option>
+          ))}
+        </select>
+      )}
     </Form>
   );
 };
